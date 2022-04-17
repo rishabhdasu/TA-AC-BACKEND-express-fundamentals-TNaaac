@@ -1,23 +1,23 @@
 var express = require("express");
 var cookieParser = require("cookie-parser");
-var morgan = require("morgan");
+var logger = require("morgan");
 
 var app = express();
 
 //middlewares
 
 app.use(cookieParser());
-app.use(morgan("dev"));
+app.use(logger("dev"));
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.cookie("username", "Suraj");
+  console.log(req.cookie);
   next();
 });
 
-app.get("/", (req, res) => {
-  console.log(req.cookies);
+app.get("/about", (req, res) => {
   res.cookie("username", "Suraj");
+  res.end("About");
 });
 
 app.listen(4000, () => {
