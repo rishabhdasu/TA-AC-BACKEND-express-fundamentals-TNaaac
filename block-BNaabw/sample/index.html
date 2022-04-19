@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ae3295e5a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="feeds_creator()">
+    <!-- Header -->
+    <header class="container flex justify-between align-center">
+      <!-- Header Left -->
+      <div
+        class="header-left flex justify-between align-center flex-24 ms-flex-15 ms-flex-start"
+      >
+        <figure class="brand ms-flex-15">
+          <i class="fab fa-facebook"></i>
+        </figure>
+        <div class="header-search ms-flex-15">
+          <span class="material-icons">search</span>
+          <input
+            type="text"
+            name="search-input"
+            class="search-input"
+            placeholder="Search Facebook"
+          />
+        </div>
+      </div>
+      <!-- Header Middle -->
+      <div class="header-middle flex-24 flex justify-between ss-none">
+        <div class="active header-middle-div">
+          <a href="#"><span class="material-icons">home</span></a>
+        </div>
+        <div class="header-middle-div">
+          <a href="#"><span class="material-icons">people</span></a>
+        </div>
+        <div class="header-middle-div">
+          <a href="#"><span class="material-icons">groups</span></a>
+        </div>
+        <label class="bars header-middle-div none ms-block" for="toggle">
+          <i class="fas fa-bars"></i>
+        </label>
+        <input id="toggle" class="none" type="checkbox" />
+        <div class="hamburger-menu ms-hamburger-menu scroll-none">
+          <ul>
+            <li class="sidebar-list-item sidebar-profile">
+              <a href="#" class="flex align-center">
+                <span class="material-icons">person</span>
+                <p>Rishabh Dasgupta</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">people</span>
+                <p>Find Friends</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <i class="fab fa-facebook primary"></i>
+                <p>Welcome</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">groups</span>
+                <p>Groups</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">storefront</span>
+                <p>Marketplace</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">video_camera_front</span>
+                <p>Watch</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+            <li class="sidebar-list-item">
+              <a href="#" class="flex align-center">
+                <span class="material-icons primary">watch_later</span>
+                <p>Memories</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Header Right -->
+      <div class="header-right flex justify-between align-center flex-24">
+        <a href="#" class="header-profile">
+          <span class="material-icons">person</span>
+          <p>Rishabh</p>
+        </a>
+        <span class="material-icons">apps</span>
+        <i class="fab fa-facebook-messenger"></i>
+        <span class="material-icons">notifications</span>
+        <span class="material-icons">arrow_drop_down</span>
+      </div>
+    </header>
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- Create Post Add Evenet Listener -->
+    <div class="create-post none">
+      <div class="create-post-header flex justify-between align-center">
+        <div class="invisible"></div>
+        <h2>Create Post</h2>
+        <button class="align-center close-btn">X</button>
+      </div>
+      <article class="create-post-body">
+        <a href="#" class="flex align-center">
+          <span class="material-icons">person</span>
+          <div>
+            <p>Rishabh Dasgupta</p>
+            <button class="tag-people-btn">
+              <i class="fas fa-user-friends"></i>
+              Friends
+              <i class="fas fa-caret-down"></i>
+            </button>
+          </div>
+        </a>
+        <textarea
+          name="create-post-area"
+          id=""
+          cols="35"
+          rows="5"
+          placeholder="What's on your mind, Rishabh?"
+        ></textarea>
+        <div class="create-post-icons-div flex justify-between">
+          <p>Add to your post</p>
+          <span>
+            <i class="fas fa-video pink"></i>
+            <i class="far fa-images green"></i>
+            <i class="far fa-smile yellow"></i>
+            <i class="fas fa-map-marker-alt pink"></i>
+            <i class="fas fa-microphone-alt blue"></i>
+            <i class="fas fa-ellipsis-h gray"></i>
+          </span>
+        </div>
+        <button disabled class="create-post-btn disabled">Post</button>
+      </article>
+    </div>
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- Main -->
+    <main class="container flex justify-between ms-display-block">
+      <!-- Left Sidebar -->
+      <div class="sidebar-left flex-22 scroll-none ms-none">
+        <ul>
+          <li class="sidebar-list-item sidebar-profile">
+            <a href="#" class="flex align-center">
+              <span class="material-icons">person</span>
+              <p>Rishabh Dasgupta</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">people</span>
+              <p>Find Friends</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <i class="fab fa-facebook primary"></i>
+              <p>Welcome</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">groups</span>
+              <p>Groups</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">storefront</span>
+              <p>Marketplace</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">video_camera_front</span>
+              <p>Watch</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="#" class="flex align-center">
+              <span class="material-icons primary">watch_later</span>
+              <p>Memories</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Middle Section -->
+      <div class="middle-section flex-56">
+        <!-- Stories -->
+        <div class="stories flex space-evenly">
+          <div class="reels-parent flex-18">
+            <div class="reels reel1 flex column justify-between">
+              <figure class="reels-profile">
+                <img class="full" src="assets/fbcloneimg3.jpg" alt="fb" />
+              </figure>
+              <h4>Rishabh</h4>
+            </div>
+          </div>
+          <div class="reels-parent flex-18">
+            <div class="reels reel2 flex column justify-between">
+              <figure class="reels-profile">
+                <img class="full" src="assets/fbcloneimg3.jpg" alt="fb" />
+              </figure>
+              <h4>Food Blog</h4>
+            </div>
+          </div>
+          <div class="reels-parent flex-18">
+            <div class="reels reel3 flex column justify-between">
+              <figure class="reels-profile">
+                <img class="full" src="assets/fbcloneimg3.jpg" alt="fb" />
+              </figure>
+              <h4>Fashion</h4>
+            </div>
+          </div>
+          <div class="reels-parent flex-18">
+            <div class="reels reel4 flex column justify-between">
+              <figure class="reels-profile">
+                <img class="full" src="assets/fbcloneimg3.jpg" alt="fb" />
+              </figure>
+              <h4>Basketball</h4>
+            </div>
+          </div>
+          <div class="reels-parent flex-18">
+            <div class="reels reel5 flex column justify-between">
+              <figure class="reels-profile">
+                <img class="full" src="assets/fbcloneimg3.jpg" alt="fb" />
+              </figure>
+              <h4>Cool</h4>
+            </div>
+          </div>
+          <button class="stories-btn">
+            <a href="#">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </button>
+        </div>
+        <!-- Facebook Status -->
+        <div class="status ms-status">
+          <article class="flex justify-start">
+            <span class="material-icons">person</span>
+            <input
+              class="status-input"
+              type="text"
+              name="status-input"
+              placeholder="What's on your mind, Rishabh?"
+            />
+          </article>
+          <article class="status-bottom flex justify-between">
+            <a href="#"><i class="fas fa-video"></i><span>Live Video</span></a>
+            <a href="#"
+              ><i class="far fa-images"></i><span>Photo/Video</span></a
+            >
+            <a href="#"
+              ><i class="far fa-smile"></i><span>Feeling/Activity</span></a
+            >
+          </article>
+        </div>
+        <!-- Facebook Feeds -->
+        <!-- <div class="feeds ms-feeds">
+                    <div class="feeds ms-feeds">
+                        <article class="feeds-article"> 
+                            <div class="feeds-profile-container flex justify-between align-center"> 
+                                <div class="flex justify-between"> <div class="feeds-profile-image"> 
+                                    <img class="full" src="assets/fbcloneimg3.jpg" alt="fbimage"> 
+                            </div> 
+                            <div class="feeds-profile-name"> 
+                                <h3>Fashion</h3> <span>8 h <i class="fas fa-globe-europe"></i></span> 
+                            </div> 
+                        </div> <div class="feeds-profile-menu"> <i class="fas fa-ellipsis-h"></i> 
+                        </div> 
+                    </div>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, natus rerum aliquid sunt temporibus odit</p> 
+                    </article> 
+                    <figure class="feeds-image"> 
+                        <img class="full" src="assets/fbclonefeedsimg1.jpg" alt="feeds"> 
+                    </figure> <div class="feeds-bottom"> 
+                        <div class="feeds-views flex justify-between align-center"> 
+                            <span> <i class="far fa-thumbs-up"></i> 
+                                <i class="far fa-laugh-squint"></i> <p>3.1K</p> 
+                            </span> 
+                            <span> <a href="#">1K Comments</a> 
+                                <a href="#">204 Shares</a> </span> 
+                            </div> <div class="feeds-buttons flex justify-between"> 
+                                <button class="like-btn flex-32"> <i class="far fa-thumbs-up">
+                              </i> Like </button>
+                              <button class="comment-btn flex-32"> 
+                                     <i class="far fa-comment"></i> Comment </button>
+                                    <button class="share-btn flex-32">
+                                  <i class="fas fa-share"></i> Share </button> </div>
+                             </div> 
+                     </div>
+                </div> -->
+        <!-- Feeds End -->
+      </div>
+      <!-- Right Sidebar -->
+      <div class="sidebar-right flex-22 ms-none">
+        <h4>Group conversations</h4>
+        <button>
+          <i class="fas fa-plus"></i>
+          Create New Group
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

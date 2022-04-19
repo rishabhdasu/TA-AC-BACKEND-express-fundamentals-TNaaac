@@ -1,0 +1,519 @@
+// Header
+header {
+    padding: 0.5rem 1rem 0 1rem;
+    background-color: white;
+    box-shadow: 0 5px 8px -9px rgba($color: #000000, $alpha: 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    .brand i {
+        font-size: 2.5rem;
+        color: #1093F4;
+    }
+    .material-icons, .fa-facebook-messenger {
+        font-size: 1.5rem;
+    }
+    .header-search {
+        padding: 0.5rem;
+        width: 100%;
+        margin-left: 0.4rem;
+        border-radius: 1.5rem;
+        background-color: $secondary;
+        span {
+            vertical-align: middle;
+        }
+        input {
+            background-color: transparent;
+            outline: none;
+        }
+    }
+    // Header Middle
+    .header-middle {
+        .header-middle-div {
+            padding: 1rem 2rem 0.7rem 2rem;
+            cursor: pointer;
+            &:hover:not(.active) {
+                background-color: $secondary;
+                border-radius: 0.8rem;
+            }
+        }
+        .active {
+            border-bottom: 3px solid $primary;
+            a {
+                color: $primary;
+            }
+        }
+        a, label {
+            color: #777676;
+            padding: 0.5rem;
+            span, i {
+                font-size: 2rem;
+            }
+        }
+        .hamburger-menu {
+            display: none;
+        }
+    }
+    // Header Right
+    .header-right {
+        .header-profile {
+            padding: 0.4rem;
+            width: 8rem;
+            border-radius: 2rem;
+            margin-right: 0.4rem;
+            &:hover {
+                background-color: $secondary; 
+            }
+            .material-icons {
+                margin-right: 0.5rem;
+            }
+            p {
+                color: black;
+            }
+        }
+        a, span {   
+            display: flex;
+            align-items: center;
+            span {
+                background-color: white;
+            }
+            .material-icons, i {
+                background-color: #cecccc;
+                border: 1px solid #696969;
+                color: white;
+                padding: 0.2rem;
+                font-size: 1.5rem;
+            }
+        }
+        span, i {
+            background-color: $secondary;
+            color: black;
+            padding: 0.6rem;
+            border-radius: 50%;
+            margin-right: 0.4rem;
+            cursor: pointer;
+        }
+    }
+}
+.brand {
+    color: $primary;
+}
+
+// main 
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+main {
+    background-color: #F0F2F5;
+
+    // Sidebar Left
+    .sidebar-left {
+        position: fixed;
+        padding-left:1rem ;
+        padding-top: 1.5rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 22%;
+        z-index: 1;
+        top: 12%;
+        left: 0;
+        height: 100%;
+        :-webkit-scrollbar {
+            display: none;
+        }
+        ul {
+            .sidebar-profile {
+                a {
+                    span {
+                        background-color: white;
+                    }
+                    .material-icons {
+                        background-color: #cecccc;
+                        border: 1px solid #696969;
+                        color: white;
+                        padding: 0.2rem;
+                        font-size: 1.5rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            li {
+                margin-bottom: 1rem;
+                a {
+                    span, i {
+                        font-size: 1.8rem;
+                    }
+                    color: black;
+                    p {
+                        font-size: 1.2rem;
+                        margin-left: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // Feeds
+
+    .middle-section {
+        margin-left: 22%;
+        
+        // Stories
+        .stories {
+            margin-top: 2rem;
+            position: relative;
+            padding: 0 1.5rem;
+
+            // 
+            .reels-parent {
+                height: 40vh;
+                width: 6rem;
+                position: relative;
+                overflow: hidden;
+                // 
+                .reels-profile {
+                    width: 2rem;
+                    border-radius: 50%;
+                    border: 2px solid $primary;
+                    img {
+                        border-radius: 50%;
+                        display: block;
+                    }
+                }
+                h4 {
+                    color: white;   
+                    text-align: center;    
+                    font-weight: 500;        
+                }
+            }
+            // 
+            .reels {
+                height: 100%;
+                width: 100%;
+                padding: 1rem 0.5rem;
+                border-radius: 0.8rem;
+                transition: all 1s;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+            // 
+            .reel1 {
+                background-image: url(../assets/fbcloneimg1.jpg);
+            }
+            .reel2 {
+                background-image: url(../assets/fbcloneimg2.jpg);
+            }
+            .reel3 {
+                background-image: url(../assets/fbcloneimg4.jpg);
+            }
+            .reel4 {
+                background-image: url(../assets/fbcloneimg5.jpg);
+            }
+            .reel5 {
+                background-image: url(../assets/fbcloneimg6.jpg);
+            }
+            .stories-btn {
+                position: absolute;
+                border-radius: 50%;
+                padding: 0.8rem;
+                border: 1px solid gray    ;
+                right: 2%;
+                top: 50%;
+                cursor: pointer;
+                transform: translateY(-50%);
+                &:hover {
+                    background-color: $secondary;
+                }
+                a {
+                    color: black;
+                }
+            }
+                } 
+                // Stories End
+
+                // Status
+                .status {
+                    margin: 2rem auto;
+                    width: 70%;
+                    background-color: white;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    box-shadow: 1px 1px 2px 2px rgba($color: #000000, $alpha: 0.1);
+                    .material-icons {
+                        border-radius: 50%;
+                        margin-right: 0.5rem;
+                        background-color: rgb(202, 199, 199);
+                        color: white;
+                        padding: 0.5rem;
+                    }
+                    input {
+                        width: 100%;
+                        background-color: $secondary;
+                        border-radius: 1rem;
+                        padding: 0.4rem;
+                        font-size: 1rem;
+                        outline: none;
+                    }
+                    // Status bottom
+                    .status-bottom {
+                        border-top: 1px solid $secondary;
+                        margin-top: 1rem;
+                        padding: 1rem 1rem 0 1rem;
+                        a {
+                            color: gray;
+                        }
+                        i {
+                            margin-right: 0.6rem;
+                        }
+                        .fa-video {
+                            color: #F3425F;
+                        }
+                        .fa-images {
+                            color: #45BD62;
+                        }
+                        .fa-smile {
+                            color: #F7B928;
+                        }
+                    }
+                }
+                // Status Ends
+                
+                // Feeds
+                .feeds {
+                    margin: 2rem auto;
+                    width: 70%;
+                    background-color: white;
+                    padding: 1rem 0 0.2rem 0;
+                    border-radius: 0.5rem;
+                    box-shadow: 1px 1px 2px 2px rgba($color: #000000, $alpha: 0.1);
+                    
+                    .feeds-article {
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                        .feeds-profile-image {
+                            width: 3rem;
+                            border: 2px solid $primary;
+                            border-radius: 50%;
+                            margin-right: 0.8rem;
+                            img {
+                                border-radius: 50%;
+                                padding: 0.1rem;
+                                display: block;
+                            }
+                        }
+                        .feeds-profile-name {
+                            h3 {
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                margin-bottom: 0.4rem;
+                            }
+                            span {
+                               color: rgb(90, 90, 90);
+                              i {
+                                margin-left: 0.4rem;
+                              }
+                            }
+                        }
+                        .feeds-profile-menu {
+                            color: rgb(104, 103, 103);
+                            font-size: 1.2rem;
+                        }
+                        p {
+                            padding: 0.5rem 0;
+                            
+                        }
+                    }
+                    // Feeds Article Ends
+                    .feeds-image {
+                        width: 100%;
+                        img {
+                            display: block;
+                        }
+                    }
+                    .feeds-bottom {
+                        padding: 1rem 1.2rem 0 1.2rem;
+                        cursor: pointer;
+                        .feeds-views {
+                            i {
+                                padding: 0.4rem;
+                                border-radius: 50%;
+                            }
+                            .fa-thumbs-up {
+                                background-color: $primary;
+                                color: white;
+                            }
+                            .fa-laugh-squint {
+                                background-color: #FDDB64;
+                                color: rgb(230, 116, 116);
+                            }
+                            p {
+                                display: inline-block;
+                                color: rgb(102, 101, 101);
+                                margin-left: 0.2rem;
+                            }
+                            a {
+                                color: rgb(102, 101, 101);
+                                margin-left: 0.4rem;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        .feeds-buttons {
+                            margin-top: 1rem;
+                            padding-top: 0.2rem;
+                            border-top: 1px solid rgb(223, 221, 221);
+                            button {
+                                border: none;
+                                outline: none;
+                                background-color: transparent;
+                                color: rgb(63, 62, 62);
+                                padding: 0.5rem;
+                                border-radius: 0.4rem;
+                                font-size: 1rem;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: $secondary;
+                                }
+                                i {
+                                    margin-left: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                // Feeds end
+        }
+        // Middle Section End
+
+        // Sidebar right 
+        .sidebar-right {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            h4 {
+                color: rgb(119, 118, 118);
+                font-size: 1.2rem;
+                font-weight: 550;
+                margin-bottom: 1rem;
+            }
+            button {
+                border: none;
+                padding: 0.5rem;
+                background-color: transparent;
+                font-size: 1rem;
+                i {
+                    background-color: $secondary;
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    // Add Event Listeners
+
+    // Create Post
+
+    .create-post {
+        background-color: white;
+        width: 40%;
+        position: fixed;
+        top: 15%;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 1rem 0;
+        z-index: 999;
+        border-radius: 0.2rem; 
+        .create-post-header {
+            padding: 0.5rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid rgb(204, 201, 201);
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 800;
+            }
+            button {
+                background-color: rgb(238, 234, 234);
+                border: none;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                text-align: right;
+                color: gray;
+                font-weight: bold;
+                font-size: 1.2rem;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+        article {
+            padding: 0 1rem;
+            .material-icons {
+                font-size: 2rem;
+                color: gray;
+                background-color: $secondary;
+                border-radius: 50%;
+                padding: 0.4rem;
+                margin-right: 0.4rem;
+            }
+             p {
+                 color: black;
+             }
+             .tag-people-btn {
+                 border: none;
+                 outline: none;
+                 padding: 0.2rem;
+                 margin-top: 0.4rem;
+                 border-radius: 0.2rem;
+                 background-color: $secondary;
+                 cursor: pointer;
+             }
+        }
+        textarea {
+            margin-top: 0.5rem;
+            resize: none;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 1.5rem;
+        }
+        .create-post-icons-div {
+            border: 1px solid rgb(180, 179, 179);
+            padding: 1rem;
+            border-radius: 0.3rem; 
+            p {
+                font-size: 1.2rem;
+            }
+             i  {
+                 margin-left: 0.4rem;
+                 font-size: 1.2rem;
+                 cursor: pointer;
+             }
+        }
+        .disabled {
+            cursor: not-allowed;
+            background-color: rgb(219, 217, 217);
+            color: gray;
+        }
+        .active {
+            cursor: pointer;
+            background-color: $primary;
+            color: white;
+        }
+        .create-post-btn {
+            margin-top: 0.4rem;
+            width: 100%;
+            padding: 0.4rem;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+    }

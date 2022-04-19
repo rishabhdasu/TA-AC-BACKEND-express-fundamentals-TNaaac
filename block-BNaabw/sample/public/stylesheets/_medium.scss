@@ -1,0 +1,104 @@
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        max-width: 1100px;
+    }
+    .ms-none {
+        display: none;
+    }
+    .ms-block {
+        display: block;
+    }
+    .header-search {
+        border-radius: 50% !important;
+        .search-input {
+            display: none;
+        }
+    }
+
+    // hamburger
+
+
+
+    .ms-hamburger-menu {
+        display: block;
+        padding-left: 1rem ;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 1;
+        left: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 10%;
+        background-color: $secondary;
+        padding-top: 1rem;
+        z-index: 99;
+        :-webkit-scrollbar {
+            display: none;
+        }
+        ul {
+            .sidebar-profile {
+                a {
+                    span {
+                        background-color: white;
+                    }
+                    .material-icons {
+                        background-color: #cecccc;
+                        border: 1px solid #696969;
+                        color: white;
+                        padding: 0.2rem;
+                        font-size: 1.5rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            li {
+                margin-bottom: 1rem;
+                a {
+                    span, i {
+                        font-size: 1.8rem;
+                    }
+                    color: black;
+                    p {
+                        font-size: 1.2rem;
+                        margin-left: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    #toggle:checked ~ .ms-hamburger-menu {
+        display: block;
+    }
+
+
+    // 
+
+    .ms-status {
+        width: 80% !important;
+    }
+    .ms-feeds {
+        width: 80% !important;
+    }
+    .middle-section {
+        margin-left: 1% !important;
+    }
+    .header-profile {
+        display: none !important;
+    }
+
+    // Medium Flexs
+   .ms-flex-15 {
+       flex: 0 1 15%;
+   }
+   .ms-display-block {
+       display: block;
+   }
+   .ms-flex-start {
+       justify-content: flex-start;
+   }
+    
+}
