@@ -4,6 +4,7 @@ var cookieParser = require("cookie-parser");
 
 var app = express();
 
+//middlewares
 app.use(logger("dev"));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
@@ -14,6 +15,7 @@ app.use((req, res, next) => {
   next();
 });
 
+// routes
 app.get("/", (req, res) => {
   res.type("html").send("<h2>Welcome to Express</h2>");
 });
@@ -34,12 +36,14 @@ app.get("/users/username", (req, res) => {
   res.type("html").send(`<h2>${req.params.username}</h2>`);
 });
 
+// 404 error
 app.use((req, res, next) => {
-  next("Page Not Found");
+  res.send("Page Not Found");
 });
 
+// custom error
 app.use((err, req, res, next) => {
-  res.status(500).send(err);
+  res.send(err);
 });
 
 app.listen(3000, () => {
