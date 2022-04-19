@@ -1,0 +1,77 @@
+// General
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.3;
+    background-color: $secondary;
+}
+main {
+    position: relative;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+input, select {
+    border: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+.padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+a {
+    text-decoration: none;
+}
+.full {
+    width: 100%;
+}
+.font-0 {
+    font: 0;
+}
+.block {
+    display: inline-block;
+    vertical-align: middle;
+}
+.text-center {
+    text-align: center;
+}
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+.primary {
+    color: $primary;
+}
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+.pink {
+    color: #F3425F;
+}
+.green {
+    color: #45BD62;
+}
+.yellow {
+    color: #F7B928;
+}
+.blue {
+    color: $primary;
+}
+.gray {
+    color: gray;
+}
+.opacity {
+    opacity: 0.2;
+}
